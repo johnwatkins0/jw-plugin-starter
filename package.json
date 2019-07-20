@@ -1,0 +1,58 @@
+{
+  "author": "",
+  "browserslist": {
+    "extends": "@wordpress/browserslist-config"
+  },
+  "devDependencies": {
+    "@wordpress/babel-preset-default": "^4.3.0",
+    "@wordpress/browserslist-config": "^2.5.0",
+    "@wordpress/eslint-plugin": "^2.3.0",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.1.0",
+    "cssnano": "^4.1.10",
+    "eslint": "^6.0.1",
+    "husky": "^3.0.1",
+    "lint-staged": "^9.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.12.0",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "prettier-eslint": "^9.0.0",
+    "sass-loader": "^7.1.0",
+    "stylelint": "^10.1.0",
+    "stylelint-config-wordpress": "^14.0.0",
+    "webpack": "^4.36.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-fix-style-only-entries": "^0.3.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "license": "ISC",
+  "lint-staged": {
+    "*.js": [
+      "eslint"
+    ],
+    "*.php": [
+      "./vendor/bin/phpcs --extensions=php --warning-severity=8 -s"
+    ],
+    "*.scss": [
+      "stylelint"
+    ]
+  },
+  "name": "@johnwatkins0/jw-plugin-starter",
+  "scripts": {
+    "build": "webpack -p",
+    "lint": "eslint src",
+    "stylelint": "stylelint src",
+    "watch": "webpack -wd"
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-wordpress/scss"
+    ]
+  },
+  "version": "0.0.1"
+}

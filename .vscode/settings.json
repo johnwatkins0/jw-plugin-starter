@@ -1,0 +1,10 @@
+{
+    "phpcs.executablePath": "vendor/bin/phpcs",
+    "phpcs.showSources": true,
+    "phpcs.warningSeverity": 1,
+    "phpcs.errorSeverity": 1,
+    "phpcbf.executablePath": "vendor/bin/phpcbf",
+    "phpcbf.onsave": true,
+    "eslint.autoFixOnSave": true,
+    "prettier.eslintIntegration": true
+}
