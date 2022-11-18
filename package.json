@@ -22,7 +22,7 @@
     "stylelint": "^10.1.0",
     "stylelint-config-wordpress": "^14.0.0",
     "webpack": "^4.36.1",
-    "webpack-cli": "^3.3.6",
+    "webpack-cli": "^3.3.12",
     "webpack-fix-style-only-entries": "^0.3.0"
   },
   "husky": {
